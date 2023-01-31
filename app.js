@@ -1,24 +1,23 @@
-
 function hora_actual() {
 
-    datos = new Date()
-    horas = datos.getHours()
-    minutos = datos.getMinutes()
-    segundos = datos.getSeconds()
+    let datos = new Date();
+    let horas = datos.getHours();
+    let minutos = datos.getMinutes();
+    let segundos = datos.getSeconds();
 
-    str_segundo = new String (segundos)
+    let str_segundo = new String (segundos)
     if (str_segundo.length == 1)
        segundos = "0" + segundos
 
-    str_minuto = new String (minutos)
+    let str_minuto = new String (minutos)
     if (str_minuto.length == 1)
        minutos = "0" + minutos
 
-    str_hora = new String (horas)
+    let str_hora = new String (horas)
     if (str_hora.length == 1)
        horas = "0" + horas
 
-    tiempoPantalla = horas + " : " + minutos + " : " + segundos
+    let tiempoPantalla = horas + " : " + minutos + " : " + segundos;
 
     document.querySelector("#reloj").innerText =  tiempoPantalla;
     document.querySelector("#reloj").textContent =  tiempoPantalla;
